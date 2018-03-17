@@ -1,0 +1,34 @@
+#include<iostream>
+const int  M = 4;
+const int N = 4;
+using namespace std;
+
+
+void snake_pattern(int matrix[M][N]);
+int main()
+{
+	int matrix[][N] = { { 10, 20, 30, 40 }, { 15, 25, 35, 45 }, { 27, 29, 37, 48 }, { 32, 33, 39, 50 } };
+	snake_pattern(matrix);
+
+	system("pause");
+	return 0;
+}
+void snake_pattern(int matrix[M][N])
+{
+	for (int i = 0; i < M; i++)
+	{
+		if (i % 2 == 0)
+		{
+			for (int j = 0; j < N; j++)
+				cout << matrix[i][j] << " ";
+		}
+		else
+		{
+			for (int j = N-1; j >= 0; j--)
+			{
+				cout << matrix[i][j] << " ";
+			}
+		}
+	}
+
+}
